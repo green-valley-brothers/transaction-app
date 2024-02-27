@@ -1,11 +1,14 @@
 import './App.css'
-
+import { CashBookProvider } from './context/CashBookContext'
+import AddTransactionForm from './context/components/AddTransactionForm'
+import TransactionList from './context/components/TransactionList'
 
 function App() {
-
-
   return (
-    <div></div>
+    <CashBookProvider>
+      <AddTransactionForm/>
+      <TransactionList />
+    </CashBookProvider>
   )
 }
 
