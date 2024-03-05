@@ -9,24 +9,11 @@ const validationSchema = Yup.object().shape({
 
 export function AddTransactionForm() {
   const {addTransaction} = useCashBook()
-  // const [description, setDescription] = useState('')
-  // const [amount, setAmount] = useState(0)
 
   const handleSubmit = (values, {resetForm}) => {
-    // e.preventDefault();
     addTransaction({...values, id: Date.now()})
     resetForm()
-    // setDescription('')
-    // setAmount(0)
   }
-
-  // return (
-  //   <form onSubmit={handleSubmit}>
-  //     <input type='text' value={description} onChange={e => setDescription(e.target.value)}/>
-  //     <input type='number' value={amount} onChange={e => setAmount(e.target.value)}/>
-  //     <button type='submit'>Add Transaction</button>
-  //   </form>
-  // )
 
   return (
     <Formik

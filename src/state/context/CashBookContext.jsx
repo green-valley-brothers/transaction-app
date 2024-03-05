@@ -5,22 +5,13 @@ export const CashBookContext = createContext();
 
 export function CashBookProvider({children}){
   const [state, dispatch] = useReducer(cashBookReducer, initialState)
-  // const [transactions, setTransactions] = useState([]);
 
   const addTransaction = (transaction) => {
     dispatch({type: 'ADD_TRANSACTION', payload: transaction})
-    // setTransactions([...transactions, transaction])
-    // setTransactions(prevTransactions => [...prevTransactions, transaction])
   }
 
   const deleteTransaction = (id) => {
     dispatch({type: 'DELETE_TRANSACTION', payload: id})
-    // setTransactions(prevTransactions =>{ 
-    //   console.log(prevTransactions.filter(transaction => transaction.id !== id));
-      
-    //   // prevTransactions.filter(transaction => transaction.id !== id}))
-    //   return prevTransactions.filter(transaction => transaction.id !== id)
-  // })
   }
 
   return (

@@ -3,8 +3,6 @@ import { CashBookContext } from "../../state/context/CashBookContext"
 
 export function TransactionList() {
   const {transactions, deleteTransaction} = useContext(CashBookContext);
-  // const {transactions, deleteTransaction} = useCashBook()
-  // const transactions = [];
 
   const handleDelete = (id) => {
     deleteTransaction?.(id)
