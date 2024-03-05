@@ -23,11 +23,13 @@ export function AddTransactionForm() {
     >
       {({errors, touched}) => (
         <Form>
-          <Field name="description" />
+          <label htmlFor="description" >Description</label>
+          <Field id="description" name="description" placeholder="Enter description"/>
           {errors.description && touched.description ? (
             <div>{errors.description}</div>
           ): null}
-          <Field name="amount" type="number" />
+          <label htmlFor="amount">Amount</label>
+          <Field id="amount" name="amount" type="number" />
           {errors.amount && touched.amount ? (
             <div>{errors.amount}</div>
           ): null}
