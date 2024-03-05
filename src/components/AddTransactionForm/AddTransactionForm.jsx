@@ -1,4 +1,4 @@
-import { useCashBook } from "../CashBookContext"
+import { useCashBook } from "../../state/context/CashBookContext";
 import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
 
@@ -7,7 +7,7 @@ const validationSchema = Yup.object().shape({
   amount: Yup.number().required("Amount is required").positive("Amount must be positive"),
 });
 
-function AddTransactionForm() {
+export function AddTransactionForm() {
   const {addTransaction} = useCashBook()
   // const [description, setDescription] = useState('')
   // const [amount, setAmount] = useState(0)

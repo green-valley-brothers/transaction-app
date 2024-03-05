@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { CashBookContext, useCashBook } from "../CashBookContext"
+import { CashBookContext } from "../../state/context/CashBookContext"
 
-function TransactionList() {
+export function TransactionList() {
   const {transactions, deleteTransaction} = useContext(CashBookContext);
   // const {transactions, deleteTransaction} = useCashBook()
   // const transactions = [];

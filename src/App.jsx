@@ -1,7 +1,8 @@
 import './App.css'
-import { CashBookProvider } from './context/CashBookContext'
-import AddTransactionForm from './context/components/AddTransactionForm'
-import TransactionList from './context/components/TransactionList'
+
+import { CashBookProvider } from './state/context/CashBookContext'
+import { AddTransactionForm } from './components/AddTransactionForm/AddTransactionForm'
+import { TransactionList } from './components/TransactionList/TransactionList'
 
 function App() {
   return (
